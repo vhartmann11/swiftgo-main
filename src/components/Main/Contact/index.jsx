@@ -1,5 +1,5 @@
 import { AiOutlineDoubleRight } from "react-icons/ai";
-import styles from "./contact.module.scss";
+import styles from "./Contact.module.scss";
 import { useState } from "react";
 import { Toaster, toast } from 'sonner'
 
