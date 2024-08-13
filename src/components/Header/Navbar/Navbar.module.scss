@@ -1,0 +1,261 @@
+.NavLogo {
+    border: 0 solid;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: inherit;
+    text-decoration: inherit;
+    position: relative;
+
+    img {
+        aspect-ratio: auto 120 / 30;
+        border: 0 solid;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        height: auto;
+        display: block;
+        width: 11rem;
+        color: transparent;
+    }
+}
+
+.Btn {
+    display: flex;
+    align-items: center;
+    font: inherit;
+    vertical-align: baseline;
+    padding: 0;
+    color: inherit;
+    text-decoration: inherit;
+    position: relative;
+    font-size: 1.4rem;
+    border: 0 solid;
+    box-sizing: border-box;
+    margin: 0;
+    color: #fff;
+
+    .LinksBtn {
+        border: 0 solid;
+        box-sizing: border-box;
+        margin: 3px;
+        font: inherit;
+        text-decoration: inherit;
+        position: relative;
+        align-items: center;
+        column-gap: .75rem;
+        border-radius: 50px;
+        background-color: #151811;
+        padding: .75rem 1.5rem;
+        font-weight: 500;
+        color: #e3e7df;
+        display: flex;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            transform: translateY(-8px);
+            color: #72ca61;
+
+            .BtnAnimationOut {
+                color: #53ce3a;
+                transition: transform 0.3s ease-in-out;
+                transform: translateX(10px);
+            }
+        }
+
+        .BtnAnimationOut {
+            color: #72ca61;
+            margin-top: 6px;
+        }
+    }
+}
+
+.NavContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    font-weight: 500;
+}
+
+.NavLinks {
+    display: flex;
+    align-items: center;
+
+    .LinksGrid {
+        display: flex;
+        gap: 20px;
+    }
+
+    .Links {
+        border: 0 solid;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        color: inherit;
+        text-decoration: inherit;
+        position: relative;
+        display: flex;
+        font-size: 1.5rem;
+
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -5px;
+            height: 2px;
+            background-color: #72ca61;
+            transform: scaleX(0);
+            transform-origin: left center;
+            transition: transform 0.4s ease;
+        }
+
+        &:hover:before {
+            transform: scaleX(1);
+        }
+
+        &:hover {
+            opacity: 0.88;
+        }
+    }
+}
+
+.HamburgerMenu {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+
+    .HamburgerIcon {
+        padding: .5rem;
+        height: 2.25rem;
+        width: 2.25rem;
+        border-radius: 9999px;
+        background-color: #a0bab6;
+    }
+}
+
+.MobileMenu {
+    position: absolute;
+    top: 75px;
+    right: 50px;
+    border-radius: 15px;
+    background-color: #151811;
+    width: 0; 
+    padding: 0 20px;
+    margin-top: 1rem;
+    text-align: center;
+    height: auto;
+    opacity: 0; 
+    transform: translateX(100%); 
+    transition: transform 0.5s ease, opacity 0.5s ease, width 0.5s ease;
+
+    &.show {
+        width: 40%;
+        opacity: 1; 
+        transform: translateX(0); 
+    }
+
+    a {
+        display: block;
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+        transition: background-color 0.3s;
+        text-align: left;
+        font-size: 1.4rem;
+
+        &:hover {
+            background-color: #444;
+        }
+    }
+
+    .MobileSocials {
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    .Links {
+        border: 0 solid;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        display: flex;
+        font-size: 1.2rem;
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+        transition: transform 0.4s;
+
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -5px;
+            height: 2px;
+            background-color: #72ca61;
+            transform: scaleX(0);
+            transform-origin: left center;
+            transition: transform 0.4s ease;
+        }
+
+        &:hover:before {
+            transform: scaleX(1);
+        }
+
+        &:hover {
+            transform: scale(1.05);
+            background-color: transparent;
+        }
+    }
+}
+
+
+@media (max-width: 715px) {
+    .NavLinks {
+        .LinksGrid {
+            display: none; 
+        }
+    }
+
+    .Btn {
+        display: none; 
+    }
+
+    .HamburgerMenu {
+        display: block; 
+
+        .HamburgerIcon {
+            padding: .5rem;
+            height: 2.25rem;
+            width: 2.25rem;
+            border-radius: 9999px;
+            background-color: #a0bab6;
+        }
+    }
+
+    .MobileMenu {
+        height: auto;
+        width: 40%;
+    }
+}
+
+@media (max-width: 1335px) {
+    .NavLinks {
+        .LinksGrid {
+            display: none;
+        }
+    }
+
+    .HamburgerMenu {
+        display: block;
+    }
+
+    .MobileMenu {
+        height: auto;
+        width: 40%;
+    }
+}

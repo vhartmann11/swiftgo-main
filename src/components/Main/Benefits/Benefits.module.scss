@@ -1,0 +1,304 @@
+$base-color: #151811;
+$text-color: #e3e7df;
+$highlight-color: #94e085;
+$border-color: #aeb0ab;
+
+.Benefits {
+    margin: 0;
+    position: relative;
+    display: flex;
+    column-gap: 4rem;
+    border-top-left-radius: 0.75rem;
+    border-top-right-radius: 0.75rem;
+    background-color: $base-color;
+    color: $text-color;
+    padding: 3rem 5%;
+    padding-top: 9rem;
+    padding-bottom: 9rem;
+    flex-direction: row;
+
+    img {
+        height: auto;
+        max-width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        opacity: 0.1;
+    }
+
+    .BenefitsText {
+
+        vertical-align: baseline;
+        color: $text-color;
+        border: 0 solid;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        z-index: 20;
+        display: flex;
+        width: 100%;
+        max-width: 34rem;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-bottom: 4rem;
+
+        .BenefitsBtn {
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+
+            vertical-align: baseline;
+            border: 0 solid;
+            box-sizing: border-box;
+            margin: 0;
+            position: relative;
+            display: flex;
+            align-items: center;
+            column-gap: 0.75rem;
+            border-radius: 9999px;
+            background-color: $highlight-color;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem;
+            font-weight: 500;
+            color: $base-color;
+            text-decoration: none;
+            font-size: 1.5rem;
+
+            &:hover {
+                transform: translateY(-8px);
+                color: #fff;
+
+                .BtnAnimationOut {
+                    color: #fff;
+                    transition: transform 0.3s ease-in-out;
+                    transform: translateX(10px);
+                }
+            }
+        }
+
+        h2 {
+            color: $text-color;
+            border: 0 solid;
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            line-height: 120%;
+            letter-spacing: -0.03125em;
+            max-width: 24rem;
+            padding-bottom: 1rem;
+            font-weight: 800;
+            font-size: 3.2rem;
+        }
+
+        p {
+            border: 0 solid;
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            font-weight: 500;
+            line-height: 2.5rem;
+            letter-spacing: -0.0125em;
+            margin-bottom: 3rem;
+            max-width: 28rem;
+            justify-content: flex-end;
+            color: $border-color;
+            font-size: 1.8rem;
+        }
+    }
+
+    .BenefitsGrid {
+        color: $text-color;
+        border: 0 solid;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        width: 70%;
+        column-gap: 2.5rem;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        row-gap: 4rem;
+
+        .GridText {
+            color: $text-color;
+            margin: 0;
+            padding: 0;
+            border: 0;
+
+            .GridTitle {
+                color: $text-color;
+                border: 0 solid;
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+                border-bottom-width: 1px;
+                border-color: $border-color;
+                padding-bottom: 0.5rem;
+
+                span {
+                    font-size: 3.3rem;
+                    color: $highlight-color;
+                }
+
+                h3 {
+                    color: $text-color;
+                    border: 0 solid;
+                    box-sizing: border-box;
+                    padding: 0;
+                    margin: 0;
+                    line-height: 120%;
+                    letter-spacing: -0.03125em;
+                    font-weight: 700;
+                    max-width: 32rem;
+                    font-size: 2.5rem;
+                }
+            }
+
+            .GridDescription {
+                border: 0 solid;
+                box-sizing: border-box;
+                padding: 0;
+                margin: 0;
+                font-weight: 400;
+                line-height: 150%;
+                letter-spacing: -0.0125em;
+                margin-top: 1rem;
+                color: $border-color;
+                font-size: 1.8rem;
+            }
+        }
+    }
+
+    // Responsividade
+    @media (max-width: 1200px) {
+        flex-direction: column;
+        align-items: center;
+        padding: 6rem 3%;
+
+        .BenefitsText {
+            max-width: 100%;
+            align-items: left;
+            text-align: left;
+
+            h2 {
+                font-size: 3rem;
+                line-height: 3.5rem;
+            }
+
+            p {
+                font-size: 1.6rem;
+                line-height: 2.2rem;
+                max-width: 100%;
+            }
+
+            .BenefitsBtn {
+                align-self: center;
+                font-size: 1.4rem;
+
+            }
+        }
+
+        .BenefitsGrid {
+            width: 100%;
+            grid-template-columns: 1fr;
+            column-gap: 1.5rem;
+            row-gap: 3rem;
+
+            .GridText {
+                .GridTitle {
+                    h3 {
+                        font-size: 2rem;
+                    }
+
+                    span {
+                        font-size: 3rem;
+                    }
+                }
+
+                .GridDescription {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        padding: 4rem 2%;
+
+        .BenefitsText {
+            h2 {
+                font-size: 2.5rem;
+                line-height: 3rem;
+            }
+
+            p {
+                font-size: 1.2rem;
+                line-height: 1.6rem;
+            }
+
+            .BenefitsBtn {
+                font-size: 1.2rem;
+            }
+        }
+
+        .BenefitsGrid {
+            grid-template-columns: 1fr;
+            column-gap: 1rem;
+            row-gap: 2rem;
+
+            .GridText {
+                .GridTitle {
+                    h3 {
+                        font-size: 1.8rem;
+                    }
+
+                    span {
+                        font-size: 2rem;
+                    }
+                }
+
+                .GridDescription {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 480px) {
+        padding: 3rem 1%;
+
+        .BenefitsText {
+            h2 {
+                font-size: 2rem;
+                line-height: 2.5rem;
+            }
+
+            p {
+                font-size: 1.2rem;
+                line-height: 1.8rem;
+            }
+
+            .BenefitsBtn {
+                font-size: 1.2rem;
+            }
+        }
+
+        .BenefitsGrid {
+            .GridText {
+                .GridTitle {
+                    h3 {
+                        font-size: 2rem;
+                    }
+
+                    span {
+                        font-size: 2.8rem;
+                    }
+                }
+
+                .GridDescription {
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
+}

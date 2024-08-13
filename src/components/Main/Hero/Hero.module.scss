@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.Hero {
+    font-family: "Montserrat", sans-serif;
+    display: block;
+    border: 0 solid;
+    box-sizing: border-box;
+    margin: 0;
+    border-color: #d4d9ce;
+    padding: 4rem 5% 9rem;
+    position: relative;
+    background-color: hsla(86, 13%, 89%, .8);
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 75%;
+        background-image: url('/herobg.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: -1;
+    }
+
+    .HeroContainer {
+        margin: 0;
+        vertical-align: baseline;
+        border: 0 solid;
+        box-sizing: border-box;
+        padding: 0;
+        position: relative;
+        width: 85%;
+        overflow: visible;
+
+        .HeroText {
+            vertical-align: baseline;
+            border: 0 solid;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            row-gap: 2rem;
+
+            .HeroTitle {
+                vertical-align: baseline;
+                border: 0 solid;
+                box-sizing: border-box;
+                padding: 0;
+                margin: 0;
+                letter-spacing: -0.06125em;
+                font-size: 7rem;
+                font-weight: 700;
+                line-height: 95%;
+                max-width: 100%;
+            }
+
+            .HeroDescription {
+                vertical-align: baseline;
+                border: 0 solid;
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                row-gap: 1rem;
+                align-self: flex-end;
+                max-width: 32rem;
+                opacity: 1;
+                transform: none;
+                margin-right: 2rem;
+
+                .HeroDescriptionText {
+                    vertical-align: baseline;
+                    border: 0 solid;
+                    box-sizing: border-box;
+                    padding: 0;
+                    margin: 0;
+                    font-weight: 500;
+                    line-height: 150%;
+                    letter-spacing: -0.0125em;
+                    color: #4d4d4d;
+                    font-size: 1.7rem;
+                    opacity: 1;
+                    transform: none;
+                }
+
+                .Btn {
+                    font-size: 1.5rem;
+                    vertical-align: baseline;
+                    border: 0 solid;
+                    box-sizing: border-box;
+                    margin: 0;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    column-gap: 0.75rem;
+                    border-radius: 9999px;
+                    background-color: #151811;
+                    padding: 0.75rem 1.5rem;
+                    font-weight: 500;
+                    color: #e3e7df;
+                    text-decoration: none;
+                    transition: all 0.3s ease-in-out;
+
+                    &:hover {
+                        transform: translateY(-8px);
+                        color: #72ca61;
+
+                        .BtnAnimationOut {
+                            color: #53ce3a;
+                            transition: transform 0.3s ease-in-out;
+                            transform: translateX(10px);
+                        }
+                    }
+
+                    .BtnAnimationOut {
+                        color: #72ca61;
+                        margin-top: 6px;
+                    }
+                }
+            }
+        }
+    }
+
+    .HeroBanner {
+        vertical-align: baseline;
+        border: 0 solid;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        margin-top: 4.5rem;
+        height: 0;
+        width: 100%;
+        overflow: hidden;
+        border-radius: 0.75rem;
+        padding-bottom: 25%;
+
+        .BannerImg {
+            -webkit-text-size-adjust: 100%;
+            tab-size: 4;
+            -webkit-font-smoothing: antialiased;
+            --tw-border-opacity: 0.2;
+            border: 0 solid;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                border: 0;
+
+                aspect-ratio: auto 2425/1364;
+                margin: 0;
+                padding: 0;
+                display: block;
+                max-width: 100%;
+                width: 100%;
+                object-fit: cover;
+                object-position: center;
+                height: fit-content;
+                color: transparent;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+
+        .HeroContainer {
+            width: 100%;
+
+            .HeroText {
+                .HeroTitle {
+                    font-size: 2.3rem;
+                    line-height: 2.5rem;
+                }
+
+                .HeroDescription {
+                    max-width: 100%;
+                    margin-right: 0;
+
+                    .HeroDescriptionText {
+                        font-size: 1.2rem;
+                    }
+
+                    .Btn {
+                        font-size: 1.2rem;
+                        padding: 0.5rem 1rem;
+                    }
+                }
+            }
+        }
+
+        .HeroBanner {
+            margin-top: 6rem;
+        }
+    }
+}

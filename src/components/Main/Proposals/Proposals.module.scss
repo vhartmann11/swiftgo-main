@@ -1,0 +1,202 @@
+.Proposals {
+    font: inherit;
+    vertical-align: baseline;
+    border: 0 solid;
+    box-sizing: border-box;
+    margin: 0;
+    position: relative;
+    display: flex;
+    column-gap: 4rem;
+    color: #151811;
+    padding: 3rem 5%;
+    padding-top: 9rem;
+    padding-bottom: 9rem;
+    flex-direction: row;
+    background-color: hsla(86, 13%, 89%, .8);
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 90%;
+        background-image: url('/processbg.png');
+        background-size: cover;
+        background-position: top right;
+        background-repeat: no-repeat;
+        z-index: -1;
+    }
+
+    .LeftText {
+        vertical-align: baseline;
+        color: #151811;
+        border: 0 solid;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font: inherit;
+        width: 60%;
+
+        h2 {
+            vertical-align: baseline;
+            color: #151811;
+            border: 0 solid;
+            box-sizing: border-box;
+            padding: 0;
+            font: inherit;
+            margin: 0;
+            line-height: 4.5rem;
+            letter-spacing: -0.03125em;
+            max-width: 24rem;
+            font-weight: 800;
+            padding-bottom: 4rem;
+            font-size: 3.5rem;
+        }
+    }
+
+    .RightGrid {
+        font: inherit;
+        vertical-align: baseline;
+        color: #151811;
+        border: 0 solid;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        width: 100%;
+        column-gap: 2.5rem;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        row-gap: 4rem;
+
+        .GridText {
+            font: inherit;
+            vertical-align: baseline;
+            color: #151811;
+            border: 0 solid;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            row-gap: 1rem;
+
+            h3 {
+                vertical-align: baseline;
+                color: #151811;
+                border: 0 solid;
+                box-sizing: border-box;
+                padding: 0;
+                font: inherit;
+                margin: 0;
+                line-height: 120%;
+                letter-spacing: -0.03125em;
+                border-color: #aeb0ab;
+                padding-bottom: 0.75rem;
+                font-weight: 800;
+                border-bottom-width: 2px;
+                font-size: 1.9rem;
+            }
+
+            ul {
+                vertical-align: baseline;
+                color: #151811;
+                border: 0 solid;
+                box-sizing: border-box;
+                font: inherit;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+
+                li {
+                    font: inherit;
+                    vertical-align: baseline;
+                    color: #151811;
+                    list-style: none;
+                    border: 0 solid;
+                    box-sizing: border-box;
+                    margin: 0;
+                    padding: 0;
+                    display: flex;
+                    align-items: center;
+                    column-gap: 0.5rem;
+
+                    p {
+                        margin: 0;
+                        vertical-align: baseline;
+                        list-style: none;
+                        border: 0 solid;
+                        box-sizing: border-box;
+                        padding: 0;
+                        font-weight: 500;
+                        line-height: 150%;
+                        letter-spacing: -0.0125em;
+                        color: #4d4d4d;
+                        font-size: 1.7rem;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1024px) {
+        flex-direction: column;
+        padding: 3rem 3% 6rem;
+
+        .LeftText {
+            width: 100%;
+            h2 {
+                max-width: 100%;
+                font-size: 3rem;
+                line-height: 3.5rem;
+                padding-bottom: 3rem;
+            }
+        }
+
+        .RightGrid {
+            grid-template-columns: 1fr;
+            row-gap: 2rem;
+
+            .GridText {
+                h3 {
+                    font-size: 1.7rem;
+                }
+                ul li p {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        padding: 2rem 2% 5rem;
+
+        .LeftText h2 {
+            font-size: 2.2rem;
+            line-height: 3rem;
+        }
+
+        .RightGrid .GridText h3 {
+            font-size: 1.5rem;
+        }
+        .RightGrid .GridText ul li p {
+            font-size: 1.3rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        padding: 2rem 1.5% 2rem;
+
+        .LeftText h2 {
+            font-size: 2rem;
+            line-height: 2.5rem;
+        }
+
+        .RightGrid .GridText h3 {
+            font-size: 1.3rem;
+        }
+        .RightGrid .GridText ul li p {
+            font-size: 1.2rem;
+        }
+    }
+}

@@ -1,0 +1,199 @@
+.Vehicles {
+    border: 0 solid;
+    box-sizing: border-box;
+    margin: 0;
+    position: relative;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    column-gap: 4rem;
+    border-bottom-right-radius: .75rem;
+    border-bottom-left-radius: .75rem;
+    background-color: #151811;
+    color: #e3e7df;
+    padding: 3rem 5%;
+    padding-top: 6rem;
+    padding-bottom: 8rem;
+
+    .VehiclesText {
+        color: #e3e7df;
+        border: 0 solid;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        z-index: 20;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-bottom: 4rem;
+
+        .VehiclesTitle {
+            color: #e3e7df;
+            border: 0 solid;
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            line-height: 120%;
+            letter-spacing: -.04125em;
+            padding-bottom: 1rem;
+            font-weight: 800;
+            font-size: 3.2rem;
+
+            @media (max-width: 1024px) {
+                font-size: 1.8rem;
+            }
+
+            @media (max-width: 768px) {
+                font-size: 2.4rem;
+            }
+        }
+
+        .VehiclesDescription {
+            font-weight: 500;
+            line-height: 2.5rem;
+            letter-spacing: -.0125em;
+            justify-content: flex-end;
+            color: #aeb0ab;
+            max-width: 56rem;
+            font-size: 1.8rem;
+
+            @media (max-width: 1024px) {
+                font-size: 1.8rem;
+            }
+
+            @media (max-width: 768px) {
+                font-size: 1.4rem;
+                line-height: 1.8rem;
+            }
+        }
+    }
+
+    .GridVehiclesArea {
+        color: #e3e7df;
+        border: 0 solid;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 3rem;
+        display: grid;
+        width: 100%;
+        column-gap: 1.25rem;
+        row-gap: 1.25rem;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+
+        @media (max-width: 1024px) {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        @media (max-width: 768px) {
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+
+        .VehicleGrid {
+            color: #e3e7df;
+            border: 0 solid;
+            box-sizing: border-box;
+            margin: 0;
+            position: relative;
+            border-radius: .25rem;
+            background-color: #e3e7df;
+            padding: 1.25rem;
+
+            img {
+                aspect-ratio: auto 500 / 200;
+                border: 0 solid;
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+                height: auto;
+                display: block;
+                max-width: 100%;
+                pointer-events: none;
+                width: 100%;
+                color: transparent;
+            }
+
+            .GridText {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                row-gap: 0.5rem;
+                color: #151811;
+
+                .GridTitle {
+                    color: #151811;
+                    border: 0 solid;
+                    box-sizing: border-box;
+                    padding: 0;
+                    margin: 0;
+                    line-height: 120%;
+                    letter-spacing: -.03125em;
+                    font-weight: 700;
+                    font-size: 2.2rem;
+                    font: bold;
+                }
+
+                .GridDescription {
+                    color: #151811;
+                    border: 0 solid;
+                    box-sizing: border-box;
+                    margin: 0;
+                    padding: 0;
+                    font-size: 1.8rem;
+                    font-weight: 500;
+
+                    @media (max-width: 1024px) {
+                        font-size: 1.8rem;
+                    }
+
+                    @media (max-width: 768px) {
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.VehiclesBtn {
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    vertical-align: baseline;
+    border: 0 solid;
+    box-sizing: border-box;
+    margin: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    column-gap: 0.75rem;
+    border-radius: 9999px;
+    background-color: #94e085;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    font-weight: 500;
+    color: #151811;
+    text-decoration: none;
+    font-size: 1.5rem;
+
+    &:hover {
+        transform: translateY(-8px); 
+        color: #fff;
+
+        .BtnAnimationOut {
+            color: #fff;
+            transition: transform 0.3s ease-in-out;
+            transform: translateX(10px);
+        }
+    }
+
+    @media (max-width: 768px) {
+        font-size: 1.2rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin: 0 auto;              
+    }
+}
